@@ -25,13 +25,15 @@ function SearchBox(Id) {
 }
 
 function STKOPT(Id) {
-    if (Id === 'STK') {
-        document.getElementById("STK").style.backgroundColor = 'rgb(21, 39, 110)';
-        document.getElementById("second-second").style.display = 'block';
+    document.getElementById(Id).style.backgroundColor = 'rgb(21, 39, 110)';
+    document.getElementById(Id).style.color = '#a6b8cb';
+    if (Id == 'OPT'){
+        document.getElementById('STK').style.backgroundColor = '#a6b8cb';
+        document.getElementById('STK').style.color = 'rgb(21, 39, 110)';
     }
     else {
-        document.getElementById("second-first").style.display = 'block';
-        document.getElementById("second-second").style.display = 'none';
+        document.getElementById('OPT').style.backgroundColor = '#a6b8cb';
+        document.getElementById('OPT').style.color = 'rgb(21, 39, 110)';
     }
 }
 function BPO(Id,Page){
@@ -52,16 +54,16 @@ function BPO(Id,Page){
 }
 function Current() {
     document.getElementById("Current").style.color = "#ffffff";
-    document.getElementById("Current").style.backgroundColor = "#006ae3";
-    document.getElementById("SoD").style.color = "#006ae3";
+    document.getElementById("Current").style.backgroundColor = "#0352ab";
+    document.getElementById("SoD").style.color = "#0352ab";
     document.getElementById("SoD").style.backgroundColor = "#ffffff";
 }
 
 function SoD() {
-    document.getElementById("Current").style.color = "#006ae3";
+    document.getElementById("Current").style.color = "#0352ab";
     document.getElementById("Current").style.backgroundColor = "#ffffff";
     document.getElementById("SoD").style.color = "#ffffff";
-    document.getElementById("SoD").style.backgroundColor = "#006ae3";
+    document.getElementById("SoD").style.backgroundColor = "#0352ab";
 
 }
 

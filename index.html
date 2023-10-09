@@ -16,14 +16,20 @@
   </head>
   <body>
     <div id="mainbox" class="mainbox">
-      <div id="infobar">time</div>
+      <div id="infobar" style="margin-top: 5;">time</div>
+      <div class="menu">
+        
+      </div>
       <div class="topscreen">
         <div id="navbar">
-          <button
+          <div style="">
+            <button
             style="font-size: 15; padding-right: 5"
             class="fa-solid fa-bars"
           ></button>
-          <button
+          </div>
+          <div style="display: flex; margin-top: -20; margin-left: 20;">
+            <button
             id="buttonACCOUNT"
             class="topbar"
             style="background-color: #e2f0ff"
@@ -51,10 +57,11 @@
             onclick="TopBar('buttonMORE','MORE')"
           >
             MORE
-          </button>
+          </button></div>
+          
         </div>
         <div class="second">
-          <div id="second-first" style="background-color: rgb(21, 39, 110); display: none;">
+          <div id="second-first" style="background-color: rgb(21, 39, 110);">
             <button
             id="magnifyingglass"
             class="fa-solid fa-magnifying-glass"
@@ -64,7 +71,7 @@
           <button id="BUY" style="padding: 3; padding-top: 5; padding-bottom: 6; font-size: 10;">Buy/Sell</button>
           </div>
 
-          <div id="second-second" class="second-second" style="background-color: rgb(21, 39, 110);display: block;">
+          <div id="second-second" class="second-second" style="background-color: rgb(21, 39, 110);display: none;">
             <button class="fa-solid fa-x" id="X-Mark" onclick="SearchBox('sdfsadf')"></button>
             <input type="search" id="searchbar" placeholder="Symbol Lookup"></input>
             <button id="STK" onclick="STKOPT('OPT')">STK</button>
@@ -73,7 +80,7 @@
         </div>
       </div>
       <div id="mainscreen" class="invisible-scrollbar">
-        <div id="ACCOUNT">
+        <div id="ACCOUNT" style="overflow: auto;">
           <div id="third" class="third">
             <button id="Balance" onclick="BPO('Balance', 'Balance1')">
               Balance
