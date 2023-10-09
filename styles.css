@@ -1,0 +1,288 @@
+*{
+    font-family: sans-serif;
+    color: rgb(88, 88, 88);
+    background-color: rgb(255, 255, 255);
+    font-size: 8px;
+    font-weight: 400;
+}
+body{
+
+}
+
+.mainbox {
+    position:absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    background-color: black;
+    border-radius: 30px;
+    padding: 5px;
+    width: 250px;
+    height: 525px;
+}
+#mainscreen{
+    overflow-y: scroll;
+    border-radius: 25;
+    height: 415;
+}
+.invisible-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+#infobar{
+    height: 15px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    background-color: rgb(28, 28, 28);
+    padding-top: 5px;
+    padding-left: 15px;
+}
+#navbar {
+    background-color: white;
+    padding: 5px;
+    padding-top: 8;
+    padding-bottom: 8;
+
+}
+.topbar{
+    padding: 6;
+    padding-left: 2;
+    padding-right: 2;
+    border-radius: 3px;
+    background-color: #e2f0ff;
+    background-color: #ffffff;
+
+}
+.second{
+    background-color: rgb(21, 39, 110);
+    height: 27px;
+    padding: 5px;
+    border-right: none;
+}
+#magnifyingglass {
+    font-size: 15;
+    padding-top: 4;
+    color: #a6b8cb; 
+    margin-left: 6; 
+    font-size: 16;
+}
+
+#X-mark{
+    font-size: 15;
+    padding-top: 3;
+    color: #a6b8cb; 
+    margin-left: 6; 
+    font-size: 16;
+    padding-bottom: 35;
+}
+#searchbar{
+    width: 150;
+    height: 20;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: 1px solid;
+    border-color:#a6b8cb ;
+    padding-right: 0px;
+
+}
+#searchbar:focus{
+    border: 3px solid green;
+    border: none;
+}
+#STK{
+    padding-left: 0 px;
+    margin-left: -2;
+    background-color: #a6b8cb;
+    border: none;
+    height: 20;
+    width: 30;
+}
+#OPT{
+    padding-left: 0 px;
+    margin-left: -3;
+    background-color: rgb(21, 39, 110);
+    border: 1px solid;
+    border-color: #a6b8cb;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    height: 20;
+    width: 30;
+}
+.third{
+    height: 25px;
+    padding: 2px;
+    display: non;
+    color: #006ae3;
+    padding-bottom: 4;
+
+}
+#balance,#positions,#orders{
+    margin-left: 7;
+    padding-top: 9;
+    font-size: 12;
+    color: #006ae3;
+    border-bottom:2px solid #1e2f45;
+    padding-bottom: 4;
+    margin-bottom: 0;
+    
+}
+#positions,#orders{
+    border-bottom: hidden;
+}
+
+hr{
+    padding-top: 0;
+    margin-top: 0;
+    margin-left: 0;
+    padding-left: 0;
+    height: 1px;
+    border: none;
+    background-color: grey;
+    margin-bottom: 0;
+
+}
+#Balance1{
+    padding-top: 15;
+    display: block;
+    font-size: 0;
+}
+.General_Stats{
+    margin-left: 10;
+    background-color:#e2f0ff;
+}
+table.General_Stats tr{
+    background-color:#e2f0ff;
+}
+
+table.General_Stats th{
+    background-color:#e2f0ff;
+    font-size: 9;
+    color: rgb(101, 100, 100);
+    font-weight: 600;
+    padding-left: 10;
+    padding-right: 10;
+
+}
+.general_Stats_Top{
+    padding-top: 10px;
+}
+#General_Stats_Middle{
+    padding-left: 20px;
+    padding-right: 20;
+}
+.General_Stats_Bottom{
+    padding-bottom: 10;
+}
+
+#Current{
+    background-color: #006ae3;
+
+    color: #ffffff;
+    border: solid;
+    border-width: 1.5;
+    border-color: #006ae3;
+    padding: 5;
+    margin-left: 10;
+    margin-top: 15;
+
+    font-size:12;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+#Sod{
+    background-color: white;
+    border: solid;
+    border-width: 1.5;
+    border-color: #006ae3;
+    color: #006ae3;
+    padding: 5;
+    margin-top: 10;
+
+    font-size:12;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#Combined{
+    margin-left: 180;
+    padding-right: 5px;
+    font-size: 9;
+    color: #006ae3;
+    font-weight: 600;
+}
+
+#Checkbox {
+    background-color: #006ae3;
+    color: #006ae3;
+    margin-left: 5px;
+    
+}
+
+.OverviewTable{
+    margin-left: 10;
+    margin-top: 5;
+    margin-right: 10;
+    border-collapse: collapse;
+    width: 230;
+}
+table.OverviewTable th{
+    border-bottom:2px solid ;
+    border-color: #1e2f45;
+    border-width: 1;
+    background-color: #ffffff;
+    text-align: left;
+    font-size: 10;
+    padding-top: 7;
+    padding-bottom: 7;
+    padding-right: 25;
+}
+
+#PandL{
+    padding-top: 10;
+    font-size: 14;
+    margin-left: 10;
+    padding-bottom: 0;
+    margin-bottom: 5;
+    font-weight: 600;
+}
+.ProfitandLoss{
+    margin-left: 10;
+    margin-top: 5;
+    border-collapse: collapse;
+    width: 230;
+    
+}
+table.ProfitandLoss th{
+    border-bottom: 2px solid;
+    border-color: #1e2f45;
+    border-width: 1;
+    background-color: #ffffff;
+    text-align: left;
+    font-size: 10;
+    padding-top: 7;
+    padding-bottom: 7;
+
+}
+#Positions1{
+    display: none;
+}
+#Orders1{
+    display: none;
+}
+#WATCHLIST{
+    display: none;
+}
+button{
+    font-size: 8px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+}
+#buy {
+    background-color: rgb(102, 155, 23);
+    border-radius: 2px;
+    color: white;
+    height: 20px;
+    font-size: larger;
+}

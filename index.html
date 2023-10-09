@@ -1,0 +1,183 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+  </head>
+  <body>
+    <div id="mainbox" class="mainbox">
+      <div id="infobar">time</div>
+      <div class="topscreen">
+        <div id="navbar">
+          <button
+            style="font-size: 15; padding-right: 5"
+            class="fa-solid fa-bars"
+          ></button>
+          <button
+            id="buttonACCOUNT"
+            class="topbar"
+            style="background-color: #e2f0ff"
+            onclick="TopBar('buttonACCOUNT','ACCOUNT')"
+          >
+            ACCOUNT
+          </button>
+          <button
+            id="buttonWATCHLIST"
+            class="topbar"
+            onclick="TopBar('buttonWATCHLIST','WATCHLIST')"
+          >
+            WATCHLIST
+          </button>
+          <button
+            id="buttonQUOTE"
+            class="topbar"
+            onclick="TopBar('buttonQUOTE','QUOTE')"
+          >
+            QUOTE
+          </button>
+          <button
+            id="buttonMORE"
+            class="topbar"
+            onclick="TopBar('buttonMORE','MORE')"
+          >
+            MORE
+          </button>
+        </div>
+        <div class="second">
+          <div id="second-first" style="background-color: rgb(21, 39, 110); display: none;">
+            <button
+            id="magnifyingglass"
+            class="fa-solid fa-magnifying-glass"
+            onclick="SearchBox('second-first')"
+          ></button>
+          <Button style="margin-left: 35; margin-right: 15; border: 1px solid; padding: 4; color: #a6b8cb; border-radius: 2px; font-size: 11;"> </span>dfssdfsdf - Margin<i style="margin-left: 4; background-color: rgb(21, 39, 110); color: #a6b8cb;" class="fa-solid fa-caret-down"></i></Button>
+          <button id="BUY" style="padding: 3; padding-top: 5; padding-bottom: 6; font-size: 10;">Buy/Sell</button>
+          </div>
+
+          <div id="second-second" class="second-second" style="background-color: rgb(21, 39, 110);display: block;">
+            <button class="fa-solid fa-x" id="X-Mark" onclick="SearchBox('sdfsadf')"></button>
+            <input type="search" id="searchbar" placeholder="Symbol Lookup"></input>
+            <button id="STK" onclick="STKOPT('OPT')">STK</button>
+            <button id="OPT" onclick="STKOPT('STK')">OPT</button>
+          </div>
+        </div>
+      </div>
+      <div id="mainscreen" class="invisible-scrollbar">
+        <div id="ACCOUNT">
+          <div id="third" class="third">
+            <button id="Balance" onclick="BPO('Balance', 'Balance1')">
+              Balance
+            </button>
+            <button id="Positions" onclick="BPO('Positions', 'Positions1')">
+              Positions
+            </button>
+            <button id="Orders" onclick="BPO('Orders', 'Orders1')">
+              Orders
+            </button>
+          </div>
+          <hr />
+          <div id="Balance1">
+            <table class="General_Stats">
+              <tr>
+                <th class="General_Stats_Top">Open P&L</th>
+                <th></th>
+                <th class="General_Stats_Top">% P&L day</th>
+              </tr>
+              <tr>
+                <th class="General_Stats_Bottom">$0.00CAD</th>
+                <th id="General_Stats_Middle" class="General_Stats_Bottom">
+                  $(16.00) USD
+                </th>
+                <th class="General_Stats_Bottom">0.00%</th>
+              </tr>
+            </table>
+            <button id="Current" onclick="Current()">Current</button>
+            <button id="SoD" onclick="SoD()">Start of day</button>
+            <ul></ul>
+            <button id="Combined" onclick="Combined()">Combined</button>
+            <button
+              id="FilledCheckmark"
+              class="fa-solid fa-square-check"
+              style="font-size: 12; color: #006ae3; display: none"
+              onclick="Combined()"
+            ></button>
+            <button
+              id="EmptyCheckmark"
+              class="fa-regular fa-square"
+              style="font-size: 12; color: #006ae3"
+              onclick="Combined()"
+            ></button>
+            <table class="OverviewTable">
+              <tr>
+                <th></th>
+                <th style="font-weight: 700; padding-left: 50">CAD</th>
+                <th style="padding-right: 0; font-weight: 700">USD</th>
+              </tr>
+              <tr>
+                <th>Total equity</th>
+                <th style="text-align: right"></th>
+                <th></th>
+              </tr>
+              <tr>
+                <th>Cash</th>
+                <th></th>
+                <th></th>
+              </tr>
+              <tr>
+                <th>Market value</th>
+                <th></th>
+                <th></th>
+              </tr>
+              <tr>
+                <th>Buying power</th>
+                <th></th>
+                <th></th>
+              </tr>
+              <tr>
+                <th>Max buying power</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </table>
+            <p id="PandL">Profit & Loss</p>
+            <table class="ProfitandLoss">
+              <tr>
+                <th rowspan="2">Closed P&L</th>
+                <th style="padding-left: 150; border-bottom: none;">ssdf</th>
+              </tr>
+              <tr>
+                <th style="padding-left: 150;">sdfs</th>
+              </tr>
+              <tr>
+                <th rowspan="2">P&L Day</th>
+                <th style="padding-left:125; border-bottom: none;">$0.00 CAD</th>
+              </tr>
+              <tr>
+                <th style="padding-left: 125;">$0.00 USD</th>
+              </tr>
+            </table>
+            <p id="PandL">Daily Orders</p>
+            <table id="DailyOrders" class="DailyOrders"></table>
+          </div>
+          <div id="Positions1">
+            <p>sdfasdfasdf</p>
+          </div>
+          <div id="Orders1"></div>
+        </div>
+        <div id="WATCHLIST">WATCHLIST</div>
+        <div id="QUOTE"></div>
+        <div id="MORE"></div>
+      </div>
+    </div>
+  </body>
+</html>
