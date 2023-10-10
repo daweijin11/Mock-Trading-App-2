@@ -22,13 +22,13 @@
       </div>
       <div class="topscreen">
         <div id="navbar">
-          <div style="">
+          <div id="three-bars">
             <button
-            style="font-size: 15; padding-right: 5"
+            style="font-size: 14; padding-right: 5; padding-top: 2px;"
             class="fa-solid fa-bars"
           ></button>
           </div>
-          <div style="display: flex; margin-top: -20; margin-left: 20;">
+          <div id="AWQM">
             <button
             id="buttonACCOUNT"
             class="topbar"
@@ -93,7 +93,7 @@
             </button>
           </div>
           <hr />
-          <div id="Balance1">
+          <div id="Balance1" style="">
             <table class="General_Stats">
               <tr>
                 <th class="General_Stats_Top">Open P&L</th>
@@ -179,7 +179,14 @@
           <div id="Positions1">
             <p>sdfasdfasdf</p>
           </div>
-          <div id="Orders1"></div>
+          <div id="Orders1" style="display: none">
+            <button id="All">All</button>
+            <button id="Open">Open</button>
+            <button id="Executed">Executed</button>
+            <div id="Orders-All"></div>
+            <div id="Orders-Open"></div>
+            <div id="Orders-Executed"></div>
+          </div>
         </div>
         <div id="WATCHLIST">WATCHLIST</div>
         <div id="QUOTE"></div>

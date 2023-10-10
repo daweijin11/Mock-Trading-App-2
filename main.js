@@ -78,4 +78,3 @@ function Combined(){
         document.getElementById("FilledCheckmark").style.display = "none";
     }
 }
-
