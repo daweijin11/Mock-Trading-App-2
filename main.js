@@ -13,6 +13,10 @@ function TopBar(Id, Page){
     }    
 }
 
+function threebars(){
+    document.getElementById('greyscreen').style.display = 'inline-block'
+}
+
 function SearchBox(Id) {
     if (Id === 'second-first') {
         document.getElementById("second-first").style.display = 'none';
@@ -78,3 +82,77 @@ function Combined(){
         document.getElementById("FilledCheckmark").style.display = "none";
     }
 }
+
+function AOE(Id){
+    const AOEs = ["All", "Open", "Executed"];
+    document.getElementById(Id).style.backgroundColor = "#006ae3";
+    document.getElementById(Id).style.color = "white";
+    for (let i = 0; i < AOEs.length; i++) {
+        if (AOEs[i] != Id) {
+            document.getElementById(AOEs[i]).style.backgroundColor = "white";
+            document.getElementById(AOEs[i]).style.color = "#006ae3";
+        }
+    }
+    if (Id == "Open") {
+        document.getElementById("timewindow").style.display = "none";
+    }
+    else {
+        document.getElementById("timewindow").style.display = "inline-block"
+    }
+}
+
+function timewindow() {
+    document.getElementById("greyscreen").style.display = "block"
+    document.getElementById("timewindow").style.borderColor = "green"
+    document.getElementById("timewindow").style.borderWidth = "2px"
+    document.getElementById("popuptable").style.display = "block"
+}
+
+function windowselector(Id){
+    const brand = ["Today","oneWk","twoWks","oneMth"];
+    var name = "";
+    for (let i = 0; i < brand.length; i++) {
+        document.getElementById(brand[i] + "circle").style.borderColor = "grey";
+        document.getElementById(brand[i]+ "innercircle").style.display = "none"
+    }
+    document.getElementById(Id + 'circle').style.borderColor = 'rgb(54, 191, 249)'
+    document.getElementById(Id + 'innercircle').style.display = "inline";
+    if (Id == "oneWk"){
+        document.getElementById("timewindowcontent").innerHTML = "1 Week"
+    }
+    if (Id == "twoWks"){
+        document.getElementById("timewindowcontent").innerHTML = "2 Weeks" 
+    }
+    if (Id == "Today"){
+        document.getElementById("timewindowcontent").innerHTML = "Today"
+    }
+    if (Id == "oneMth"){
+        document.getElementById("timewindowcontent").innerHTML = "1 Month"
+    }
+    
+    document.getElementById("timewindow").innerHTML.append('<i class="fa-solid fa-caret-down" style="background-color: #f1f1f1; padding-left: 1; font-size: 11px;"> </i>')
+
+}
+
+function greyscreen(){
+    document.getElementById('greyscreen').style.display = 'none'
+    document.getElementById('timewindow').style.borderColor = 'grey'
+    document.getElementById('timewindow').style.borderWidth = '0.5px'
+    document.getElementById("popuptable").style.display = "none"
+}
+
+function secretmenu(action){
+    var slideSource = document.getElementById('secretmenu');
+    
+    if (action == "close"){
+        slideSource.classList.toggle('fade');
+        setTimeout(function(){
+            slideSource.style.zIndex = -1
+        },300)
+    }
+    else {
+        slideSource.classList.toggle('fade')
+        slideSource.style.zIndex = 4345345499;
+    }
+}
+

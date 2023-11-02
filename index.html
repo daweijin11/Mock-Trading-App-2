@@ -20,12 +20,13 @@
       <div class="menu">
         
       </div>
+    
       <div class="topscreen">
         <div id="navbar">
           <div id="three-bars">
             <button
             style="font-size: 14; padding-right: 5; padding-top: 2px;"
-            class="fa-solid fa-bars"
+            class="fa-solid fa-bars" onclick="secretmenu('sds')"
           ></button>
           </div>
           <div id="AWQM">
@@ -67,7 +68,7 @@
             class="fa-solid fa-magnifying-glass"
             onclick="SearchBox('second-first')"
           ></button>
-          <Button style="margin-left: 35; margin-right: 15; border: 1px solid; padding: 4; color: #a6b8cb; border-radius: 2px; font-size: 11;"> </span>dfssdfsdf - Margin<i style="margin-left: 4; background-color: rgb(21, 39, 110); color: #a6b8cb;" class="fa-solid fa-caret-down"></i></Button>
+          <Button style="margin-left: 35; margin-right: 10; border: 1px solid; padding: 4; color: #a6b8cb; border-radius: 2px; font-size: 11;"> </span>143590385 - Margin<i style="margin-left: 4; background-color: rgb(21, 39, 110); color: #a6b8cb;" class="fa-solid fa-caret-down"></i></Button>
           <button id="BUY" style="padding: 3; padding-top: 5; padding-bottom: 6; font-size: 10;">Buy/Sell</button>
           </div>
 
@@ -83,7 +84,7 @@
         <div id="ACCOUNT" style="overflow: auto;">
           <div id="third" class="third">
             <button id="Balance" onclick="BPO('Balance', 'Balance1')">
-              Balance
+              Balances
             </button>
             <button id="Positions" onclick="BPO('Positions', 'Positions1')">
               Positions
@@ -93,7 +94,7 @@
             </button>
           </div>
           <hr />
-          <div id="Balance1" style="">
+          <div id="Balance1" style="display: block;">
             <table class="General_Stats">
               <tr>
                 <th class="General_Stats_Top">Open P&L</th>
@@ -174,23 +175,95 @@
               </tr>
             </table>
             <p id="PandL">Daily Orders</p>
-            <table id="DailyOrders" class="DailyOrders"></table>
+            <table id="DailyOrders" class="DailyOrders">
+            </table>
           </div>
           <div id="Positions1">
             <p>sdfasdfasdf</p>
           </div>
           <div id="Orders1" style="display: none">
-            <button id="All">All</button>
-            <button id="Open">Open</button>
-            <button id="Executed">Executed</button>
+            <button id="All" onclick="AOE('All')">All</button>
+            <button id="Open" onclick="AOE('Open')">Open</button>
+            <button id="Executed" onclick="AOE('Executed')">Executed</button>
+            <Button id="timewindow" onclick="timewindow()"> </span>
+              <span id="timewindowcontent">Today</span><i class="fa-solid fa-caret-down" style="background-color: #f1f1f1; padding-left: 1; font-size: 11px;"> </i></Button>
+            <div class="popuptable" id="popuptable">
+              <button id="Today" style="margin-top: 7px;" onclick="windowselector('Today')">Today
+                <span class="buttoncircle" id="Todaycircle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="innercircle" id="Todayinnercircle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              </button>
+              <br>
+              <button id="oneWk" onclick="windowselector('oneWk')">1 Week
+                <span class="buttoncircle" id="oneWkcircle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="innercircle" id="oneWkinnercircle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              </button>
+              <br>
+              <button id="twoWks" onclick="windowselector('twoWks')">2 Weeks
+                <span class="buttoncircle" id="twoWkscircle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="innercircle" id="twoWksinnercircle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              </button>
+              <br>
+              <button id="oneMth" onclick="windowselector('oneMth')">1 Month
+                <span class="buttoncircle" id="oneMthcircle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="innercircle" id="oneMthinnercircle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              </button>
+          
+            </div>
             <div id="Orders-All"></div>
             <div id="Orders-Open"></div>
             <div id="Orders-Executed"></div>
+            
           </div>
         </div>
         <div id="WATCHLIST">WATCHLIST</div>
         <div id="QUOTE"></div>
         <div id="MORE"></div>
+        
+      </div>
+      <div id="greyscreen" class="greyscreen" onclick="greyscreen()"></div>
+      
+      <div id="secretmenu" class="secretmenu">
+        <button class="fa-solid fa-x" id="X-Mark-secretmenu" onclick="secretmenu('close')"></button>
+        <div class="mainbuttons">
+          <button>
+            <i class="fa-solid fa-bolt" id="bolt"></i>
+            TRADING
+          </button>
+          <br>
+          <button>
+            <i class="fa-regular fa-hourglass-half" id="hourglass"></i>
+            ACCOUNT REQUEST
+          </button>
+          <br>
+          <button>
+            <i class="fa-solid fa-file-lines" id="file"></i>
+            REPORTS
+          </button>
+          <br>
+          <button>
+            <i class="fa-regular fa-credit-card" id="card"></i>
+            ADD FUNDS
+          </button>
+          <br>
+          <button>
+            <i class="fa-solid fa-gears" id="gears"></i>
+            SETTINGS
+          </button>
+        </div>
+        <div class= "mainbuttons"id="FCCL">
+          <button id="feedback">FEEDBACK</button>
+          <br>
+          <button id="chat">CHAT</button>
+          <br>
+          <button id="callus">CALL US</button>
+          <br>
+          <button id="logout">
+            LOG OUT
+            <i class="fa-solid fa-power-off" id="power"></i>
+          </button>
+        </div>
+        <p id="lastlogin">Last Login: Day Month Year Time Timezone</p>
+        
       </div>
     </div>
   </body>
