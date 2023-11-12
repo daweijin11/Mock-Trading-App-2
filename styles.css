@@ -23,21 +23,26 @@ body{
 }
 
 #greyscreen{
-    position: relative;
+    position: fixed;
     margin-top: -494;
     background-color: #676767;
     width: 250px;
     height: 494px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    opacity: 70%;
-    z-index: 434;
-    display: none;
+    opacity: 0%;
+    z-index: -1;
+    transition: opacity 0.3s;
+    cursor:default;
+}
+#greyscreen.fade{
+    opacity:70%;
+    transition: opacity 0.3s;
 }
 .menu{
     
 }
-#mainscreen{
+#mainscreen, #QUOTE{
     overflow-y: scroll;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -225,9 +230,8 @@ table.General_Stats th{
     padding-bottom: 10;
 }
 
-#Current{
+#Current, #qStocks{
     background-color: #0352ab;
-
     color: #ffffff;
     border: solid;
     border-width: 1.5;
@@ -239,7 +243,7 @@ table.General_Stats th{
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
 }
-#Sod{
+#Sod, #qOptions{
     background-color: white;
     border: solid;
     border-width: 1.5;
@@ -446,12 +450,13 @@ button{
     height: 495px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    z-index: 43453454;
-    opacity: 1;
+    z-index: -1;
+    opacity: 0;
     transition: opacity 0.3s;
 }
 #secretmenu.fade{
-    opacity:0;
+    z-index: 1234234123412;
+    opacity:1;
     transition: opacity 0.3s;
 }
 #X-Mark-secretmenu{
@@ -512,4 +517,169 @@ button{
     color: rgb(154, 154, 154);
     margin-left: 34;
     font-weight: 0;
+}
+
+#q1{
+    border-bottom: solid 1px rgb(172, 171, 171);
+    padding-bottom: 10;
+}
+#qStocks{
+    margin-left: 13;
+}
+#qOptions{
+    margin-left: -2;
+}
+#name,#prices,#afterhours{
+    margin-top: 10px;
+    margin-left: 17;
+}
+#prices{
+    margin-top: 10;
+}
+
+#ticker{
+    font-size: 12;
+    font-weight: 800;   
+}
+
+#company{
+    margin-left: 5;
+    font-size:9;
+}
+#exchange{
+    margin-left: 1;
+}
+#addtowatch{
+    color: #006ae3;
+    font-size: 13;
+    margin-left: 20;
+}
+#information{
+    margin-left: 8px;
+    padding: 4;
+    padding-right: 4.5;
+    font-size: 13;
+    color: #006ae3;
+    background-color: #e2f0ff;
+    border-radius: 7px;
+}
+#currentprice{
+    font-size: 12;
+    font-weight: 600;
+}
+#extendedhours{
+    font-weight: 900;
+}
+#ahprice{
+    font-weight: 900;
+    font-size: 11;
+    margin-left: 10;
+}
+#up,#ahup{
+    margin-left: 4;
+    margin-right: 4;
+    font-size: 12;
+    color: green;
+}
+#down,#ahdown{
+    margin-left: 4;
+    margin-right: 4;
+    font-size: 12;
+    color: red;
+}
+#changeinprice, #ahchangeinprice{
+    font-size: 9;
+    font-weight: 600;
+}
+#changeinpercent, #ahchangeinpercent{
+    margin-left: 2;
+    font-size: 9;
+    font-weight: 600;
+}
+#refresh{
+    margin-left: 30;
+    font-size: 13;
+    color: #006ae3;
+}
+#q2{
+    margin-top: 10px;
+    margin-left: 12;
+}
+#q2side,#q2down{
+    background-color:#e2f0ff ;
+    padding-left: 3;
+    width: 24px;
+    height: 24.2;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    font-size: 11;
+    padding-top: 1;
+}
+#q2down{
+    display: none;
+}
+#level1{
+    background-color:#e2f0ff;
+    height: 22;
+    font-size: 11;
+    font-weight: 600;
+    padding: 4.5;
+    padding-right: 134;
+
+}
+#questionmark{
+    height: 24.5;
+    width: 24.5;
+    font-size: 12;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: #e2f0ff;
+    padding: 5;
+    padding-top: 4;
+    
+}
+
+#level1table{
+    width: 226;
+    display: inline-table;
+    
+}
+#level1table tr{
+    text-align: left;
+}
+#level1table tr th{
+    padding-left: 4;
+    width: 33%;
+}
+#level1table tr th .cell{
+    margin-top: 5;
+    font-size: 10;
+    color: black !important;
+    font-weight: 900;
+    border-bottom: solid 1px rgb(176, 176, 176);
+    margin-right: 3;
+    padding-left: 2;
+    padding-bottom: 1;
+}
+#close, #prevopen{
+    border: solid 1px #9cc0e8 !important;
+    border-radius: 3px;
+}
+#level1table tr th div{
+    margin-top: 0.5;
+    font-size: 10;
+}
+.bold{
+    font-weight: 900;
+}
+table.level1table th{
+    margin-left: 3
+}
+#level1table tr td{
+    padding-left: 34px;
+}
+
+.close, .open{
+    background-color: #e2f0ff;
+    color: #0352ab;
 }

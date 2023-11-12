@@ -102,7 +102,8 @@ function AOE(Id){
 }
 
 function timewindow() {
-    document.getElementById("greyscreen").style.display = "block"
+    document.getElementById("timewindow").disabled = true;
+    greyscreen('open');
     document.getElementById("timewindow").style.borderColor = "green"
     document.getElementById("timewindow").style.borderWidth = "2px"
     document.getElementById("popuptable").style.display = "block"
@@ -134,25 +135,60 @@ function windowselector(Id){
 
 }
 
-function greyscreen(){
-    document.getElementById('greyscreen').style.display = 'none'
-    document.getElementById('timewindow').style.borderColor = 'grey'
-    document.getElementById('timewindow').style.borderWidth = '0.5px'
-    document.getElementById("popuptable").style.display = "none"
+function greyscreen(command){
+    var slideSource = document.getElementById('greyscreen');
+    if (command == "close"){
+        document.getElementById("greyscreen").disabled = true;
+        setTimeout(function(){
+            document.getElementById("timewindow").disabled = false;
+        },300)
+        
+        slideSource.classList.toggle('fade');
+        document.getElementById('timewindow').style.borderColor = 'grey'
+        document.getElementById('timewindow').style.borderWidth = '0.5px'
+        document.getElementById("popuptable").style.display = "none"
+        setTimeout(function(){
+            slideSource.style.zIndex = -1
+        },300)
+    }
+    else{
+        document.getElementById("greyscreen").disabled = false;
+        slideSource.style.zIndex = 9999999
+        slideSource.classList.toggle('fade');
+    }
+    
 }
 
 function secretmenu(action){
     var slideSource = document.getElementById('secretmenu');
     
     if (action == "close"){
+        document.getElementById("X-Mark-secretmenu").disabled = true;
+        document.getElementById("threebars").disabled = false;
         slideSource.classList.toggle('fade');
         setTimeout(function(){
             slideSource.style.zIndex = -1
         },300)
     }
     else {
-        slideSource.classList.toggle('fade')
+        document.getElementById("X-Mark-secretmenu").disabled = false;
+        document.getElementById("threebars").disabled = true;
         slideSource.style.zIndex = 4345345499;
+        slideSource.classList.toggle('fade')
+        
     }
 }
 
+function Level1(action){
+	if (action == "open"){
+		document.getElementById("level1table").style.display = "inline-table"
+        document.getElementById("q2side").style.display = "none"
+        document.getElementById("q2down").style.display = "inline"
+	}
+    else{
+        document.getElementById("level1table").style.display = "none"
+        document.getElementById("q2side").style.display = "inline"
+        document.getElementById("q2down").style.display = "none"
+    }
+
+}

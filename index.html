@@ -25,6 +25,7 @@
         <div id="navbar">
           <div id="three-bars">
             <button
+            id="threebars"
             style="font-size: 14; padding-right: 5; padding-top: 2px;"
             class="fa-solid fa-bars" onclick="secretmenu('sds')"
           ></button>
@@ -80,7 +81,7 @@
           </div>
         </div>
       </div>
-      <div id="mainscreen" class="invisible-scrollbar">
+      <div id="mainscreen" class="invisible-scrollbar"  style="display: none;">
         <div id="ACCOUNT" style="overflow: auto;">
           <div id="third" class="third">
             <button id="Balance" onclick="BPO('Balance', 'Balance1')">
@@ -220,7 +221,99 @@
         <div id="MORE"></div>
         
       </div>
-      <div id="greyscreen" class="greyscreen" onclick="greyscreen()"></div>
+      <div id="QUOTE" class="invisible-scrollbar">
+        <div id="q1">
+          <button id="qStocks">Stocks</button>
+          <button id="qOptions">Options</button>
+          <div id="name" class="name">
+            <span id="ticker">TSLA</span>
+            <span id="Company">Tesla</span>
+            <span id="Exchange">(NASDAQ)</span>
+            <button id="addtowatch" class="fa-solid fa-plus"></button>
+            <button id="information" class="fa-solid fa-circle-info"></button>
+          </div>
+          <div id="prices" class="prices">
+            <span id="currentprice">219.27</span>
+            <i id="up" class="fa-solid fa-caret-up"></i>
+            <i id="down" class="fa-solid fa-caret-down"></i>
+            <span id="changeinprice">-0.69</span>
+            <span id="changeinpercent">-0.31%</span>
+            <button id="refresh" class="fa-solid fa-rotate-right"></button>
+          </div>
+          <div id="afterhours" class="afterhours">
+            <span id="extendedhours">EXTENDED HOUR</span>
+            <span id="ahprice">217.70</span>
+            <i id="ahup" class="fa-solid fa-caret-up"></i>
+            <i id="ahdown" class="fa-solid fa-caret-down"></i>
+            <span id="ahchangeinprice">-1.57</span>
+            <span id="ahchangeinpercent">-0.72%</span>
+          </div>
+        </div>
+        <div id="q2">
+          <div id="infobarq2">
+              <button id="q2side" class="fa-solid fa-chevron-right" onclick="Level1('open')"></button>
+              <button id="q2down" class="fa-solid fa-chevron-down" onclick="Level1()"></button>
+            <span id="level1">
+              Level 1
+            </span>
+            <button id="questionmark" class="fa-regular fa-circle-question"></button>
+          </div>
+          <table id="level1table">
+            <tr>
+              <th>
+                <div id="close" class="cell close">
+                  <div class="close">Close</div>
+                  <div class="bold close">186.29</div>
+                </div>
+                
+              </th>
+              <th>
+                <div id="prevopen" class="cell open">
+                  <div class="close">Prev Open</div>
+                  <div class="bold open">186.30</div>
+                </div>
+                
+              </th>
+              <th>
+                <div class="cell">
+                  <div>High</div>
+                  <div class="bold">186.34</div>
+                </div>
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <div class="cell">
+                  <div>Volume</div>
+                  <div class="bold">45.656M</div>
+                </div>
+                
+              </th>
+              <th>
+                <div class="cell">
+                  <div>Market Cap</div>
+                  <div class="bold">434.23B</div>
+                </div>
+              </th>
+              <th>
+                <div class="cell">
+                  <div>Low</div>
+                  <div class="bold">3433</div>
+                </div>
+              </th>
+            </tr>
+          </table>
+          <div id="infobarq3">
+            <span id="q3down">
+              <button>down</button>
+            </span>
+            <span>Chart
+              <button>question mark</button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <button id="greyscreen" class="greyscreen" onclick="greyscreen('close')"></button>
       
       <div id="secretmenu" class="secretmenu">
         <button class="fa-solid fa-x" id="X-Mark-secretmenu" onclick="secretmenu('close')"></button>
@@ -263,7 +356,7 @@
           </button>
         </div>
         <p id="lastlogin">Last Login: Day Month Year Time Timezone</p>
-        
+
       </div>
     </div>
   </body>
